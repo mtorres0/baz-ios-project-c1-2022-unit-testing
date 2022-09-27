@@ -6,7 +6,11 @@
 
 import Foundation
 
-class MovieAPI {
+protocol MovieAPIProtocol {
+    func getMovies() -> [Movie]
+}
+
+class MovieAPI: MovieAPIProtocol {
 
     private let apiKey: String = "f6cd5c1a9e6c6b965fdcab0fa6ddd38a"
 

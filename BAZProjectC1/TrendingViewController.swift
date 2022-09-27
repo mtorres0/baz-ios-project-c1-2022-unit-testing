@@ -12,13 +12,14 @@ class TrendingViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let movieApi = MovieAPI()
-        
+        fillMovies(from: movieApi)
+    }
+    
+    func fillMovies(from movieApi: MovieAPIProtocol) {
         movies = movieApi.getMovies()
         tableView.reloadData()
     }
-
 }
 
 // MARK: - TableView's DataSource
@@ -30,7 +31,9 @@ extension TrendingViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell")!
+        guard let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell")
+        else { return UITableViewCell() }
+        return cell
     }
 
 }
@@ -45,5 +48,4 @@ extension TrendingViewController {
         config.image = UIImage(named: "poster")
         cell.contentConfiguration = config
     }
-
 }
