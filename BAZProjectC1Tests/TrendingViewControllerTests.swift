@@ -11,26 +11,28 @@ import XCTest
 class TrendingViewControllerTests: XCTestCase {
     var sut: TrendingViewController?
     var movieApiMock: MovieApiMock!
-
+    
     override func setUp() {
         super.setUp()
         sut = TrendingViewController()
         movieApiMock = MovieApiMock()
+        sut?.movieApi = movieApiMock
     }
-
+    
     override func tearDown() {
         sut = nil
         movieApiMock = nil
         super.tearDown()
     }
-
-    func testExample() throws {
+    
+    func test_tableViewNumberOfRowsInSection() throws {
         // Given
         let tableView: UITableView = try XCTUnwrap(sut?.tableView)
         // When
         movieApiMock.movies = [Movie(id: 001, title: "movie_1_mock", poster_path: "poster_path_1_mock"),
                                Movie(id: 002, title: "movie_2_mock", poster_path: "poster_path_2_mock")]
-        sut?.fillMovies(from: movieApiMock)
+        sut?.movieApi = movieApiMock
+        sut?.fillTableView()
         let moviesCount: Int = try XCTUnwrap(sut?.tableView(tableView, numberOfRowsInSection: .zero))
         // Then
         XCTAssertEqual(moviesCount, 2)
@@ -51,11 +53,35 @@ class TrendingViewControllerTests: XCTestCase {
         // When
         movieApiMock.movies = [Movie(id: 001, title: "movie_1_mock", poster_path: "poster_path_1_mock"),
                                Movie(id: 002, title: "movie_2_mock", poster_path: "poster_path_2_mock")]
-        sut?.fillMovies(from: movieApiMock)
+        sut?.movieApi = movieApiMock
+        sut?.fillTableView()
         let tableCellView: UIView = try XCTUnwrap(tableView.cellForRow(at: IndexPath(row: .zero, section: .zero))?.subviews.last)
         let titleCell: UILabel = try XCTUnwrap(tableCellView.subviews.last as? UILabel)
         // Then
         XCTAssertEqual(titleCell.text, movieApiMock.movies.first?.title)
         XCTAssertNotNil((tableCellView.subviews.first as? UIImageView)?.image)
+    }
+    
+    func test_fillTableView_WhenMoviesFailure_fillsNoData() throws {
+        // Given
+        let tableView: UITableView = try XCTUnwrap(sut?.tableView)
+        movieApiMock.movies = [Movie(id: 001, title: "movie_1_mock", poster_path: "poster_path_1_mock"),
+                               Movie(id: 002, title: "movie_2_mock", poster_path: "poster_path_2_mock")]
+        movieApiMock.isSuccessful = false
+        // When
+        sut?.movieApi = movieApiMock
+        sut?.fillTableView()
+        let numberOfRowsInSection = tableView.dataSource?.tableView(tableView, numberOfRowsInSection: .zero)
+        // Then
+        XCTAssert(numberOfRowsInSection == .zero)
+    }
+    
+    func test_fillTableView_callsMovieApi() {
+        // Given
+        let expectedCall: String = "getMovies(completion:)"
+        // When
+        sut?.fillTableView()
+        // Then
+        XCTAssertTrue(movieApiMock.calls.contains(expectedCall), "The expectedCall does't match any of the actual calls: \(movieApiMock.calls)")
     }
 }

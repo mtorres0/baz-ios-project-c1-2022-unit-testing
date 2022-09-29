@@ -10,6 +10,9 @@
 		9033C04F28E39D94006F9D8B /* BAZProjectC1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033C04E28E39D94006F9D8B /* BAZProjectC1Tests.swift */; };
 		9033C05628E39DB1006F9D8B /* TrendingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033C05528E39DB1006F9D8B /* TrendingViewControllerTests.swift */; };
 		9033C05828E3AACC006F9D8B /* MovieApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033C05728E3AACC006F9D8B /* MovieApiMock.swift */; };
+		9033C05D28E4C81B006F9D8B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033C05C28E4C81B006F9D8B /* Endpoint.swift */; };
+		9033C06128E4F862006F9D8B /* MovieApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033C06028E4F862006F9D8B /* MovieApiTests.swift */; };
+		90AF686928E5DC57006EDDA3 /* SessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF686828E5DC57006EDDA3 /* SessionStub.swift */; };
 		C30893AE28A2F42B004B1860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30893AD28A2F42B004B1860 /* AppDelegate.swift */; };
 		C30893B028A2F42B004B1860 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30893AF28A2F42B004B1860 /* SceneDelegate.swift */; };
 		C30893B528A2F42B004B1860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30893B328A2F42B004B1860 /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 		9033C04E28E39D94006F9D8B /* BAZProjectC1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZProjectC1Tests.swift; sourceTree = "<group>"; };
 		9033C05528E39DB1006F9D8B /* TrendingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewControllerTests.swift; sourceTree = "<group>"; };
 		9033C05728E3AACC006F9D8B /* MovieApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiMock.swift; sourceTree = "<group>"; };
+		9033C05C28E4C81B006F9D8B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9033C06028E4F862006F9D8B /* MovieApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiTests.swift; sourceTree = "<group>"; };
+		90AF686828E5DC57006EDDA3 /* SessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStub.swift; sourceTree = "<group>"; };
 		C30893AA28A2F42B004B1860 /* BAZProjectC1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAZProjectC1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30893AD28A2F42B004B1860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C30893AF28A2F42B004B1860 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 			children = (
 				9033C04E28E39D94006F9D8B /* BAZProjectC1Tests.swift */,
 				9033C05528E39DB1006F9D8B /* TrendingViewControllerTests.swift */,
+				9033C06028E4F862006F9D8B /* MovieApiTests.swift */,
+				90AF686828E5DC57006EDDA3 /* SessionStub.swift */,
 				9033C05728E3AACC006F9D8B /* MovieApiMock.swift */,
 			);
 			path = BAZProjectC1Tests;
@@ -102,6 +110,7 @@
 		C30893AC28A2F42B004B1860 /* BAZProjectC1 */ = {
 			isa = PBXGroup;
 			children = (
+				9033C05C28E4C81B006F9D8B /* Endpoint.swift */,
 				C30893AD28A2F42B004B1860 /* AppDelegate.swift */,
 				C30893AF28A2F42B004B1860 /* SceneDelegate.swift */,
 				C30893C328A2F845004B1860 /* TrendingViewController.swift */,
@@ -220,7 +229,9 @@
 			files = (
 				9033C04F28E39D94006F9D8B /* BAZProjectC1Tests.swift in Sources */,
 				9033C05628E39DB1006F9D8B /* TrendingViewControllerTests.swift in Sources */,
+				90AF686928E5DC57006EDDA3 /* SessionStub.swift in Sources */,
 				9033C05828E3AACC006F9D8B /* MovieApiMock.swift in Sources */,
+				9033C06128E4F862006F9D8B /* MovieApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +243,7 @@
 				C30893AE28A2F42B004B1860 /* AppDelegate.swift in Sources */,
 				C30893B028A2F42B004B1860 /* SceneDelegate.swift in Sources */,
 				C30893E228A425E1004B1860 /* MovieAPI.swift in Sources */,
+				9033C05D28E4C81B006F9D8B /* Endpoint.swift in Sources */,
 				C30893E328A425E1004B1860 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

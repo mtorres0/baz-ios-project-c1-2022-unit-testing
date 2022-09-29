@@ -9,16 +9,38 @@ import UIKit
 class TrendingViewController: UITableViewController {
 
     var movies: [Movie] = []
+    var movieApi: MovieAPIProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let movieApi = MovieAPI()
-        fillMovies(from: movieApi)
+        initializeApi()
+        fillTableView()
     }
     
-    func fillMovies(from movieApi: MovieAPIProtocol) {
-        movies = movieApi.getMovies()
-        tableView.reloadData()
+    func fillTableView() {
+        movieApi?.getMovies { moviesResult in
+            switch moviesResult {
+            case .success(let moviesData):
+                self.guaranteeMainThred {
+                    self.movies = moviesData.results
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print("error", error)
+            }
+        }
+    }
+    
+    private func initializeApi() {
+        self.movieApi = MovieAPI(session: .shared)
+    }
+    
+    private func guaranteeMainThred(_ work: @escaping () -> Void) {
+        if Thread.isMainThread {
+            work()
+        } else {
+            DispatchQueue.main.async(execute: work)
+        }
     }
 }
 

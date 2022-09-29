@@ -10,13 +10,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9033C02228E385F3006F9D8B"
+               BlueprintIdentifier = "9033C04B28E39D93006F9D8B"
                BuildableName = "BAZProjectC1Tests.xctest"
                BlueprintName = "BAZProjectC1Tests"
                ReferencedContainer = "container:BAZProjectC1.xcodeproj">
