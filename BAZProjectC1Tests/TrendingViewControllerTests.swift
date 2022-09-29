@@ -75,13 +75,4 @@ class TrendingViewControllerTests: XCTestCase {
         // Then
         XCTAssert(numberOfRowsInSection == .zero)
     }
-    
-    func test_fillTableView_callsMovieApi() {
-        // Given
-        let expectedCall: String = "getMovies(completion:)"
-        // When
-        sut?.fillTableView()
-        // Then
-        XCTAssertTrue(movieApiMock.calls.contains(expectedCall), "The expectedCall does't match any of the actual calls: \(movieApiMock.calls)")
-    }
 }
