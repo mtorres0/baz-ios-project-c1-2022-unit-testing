@@ -10,6 +10,9 @@
 		894F518528E552AA00FF2F9D /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F518428E552AA00FF2F9D /* MyViewController.swift */; };
 		894F518A28E5544100FF2F9D /* MyViewContollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F518828E5544100FF2F9D /* MyViewContollerTests.swift */; };
 		894F518C28E5562D00FF2F9D /* AppFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F518B28E5562D00FF2F9D /* AppFileManager.swift */; };
+		894F519828E5680C00FF2F9D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F519728E5680C00FF2F9D /* ImageLoader.swift */; };
+		894F519928E5680C00FF2F9D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F519728E5680C00FF2F9D /* ImageLoader.swift */; };
+		894F519C28E56A2E00FF2F9D /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F519A28E56A2E00FF2F9D /* ImageLoaderTests.swift */; };
 		89D2DC1428E4A3C90039BA09 /* MovieTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC1328E4A3C90039BA09 /* MovieTableViewDataSource.swift */; };
 		89D2DC1C28E4A6E20039BA09 /* MovieTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */; };
 		89D2DC2B28E4AEDE0039BA09 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC2928E4AEDE0039BA09 /* MovieTableViewCell.swift */; };
@@ -40,6 +43,8 @@
 		894F518428E552AA00FF2F9D /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		894F518828E5544100FF2F9D /* MyViewContollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewContollerTests.swift; sourceTree = "<group>"; };
 		894F518B28E5562D00FF2F9D /* AppFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFileManager.swift; sourceTree = "<group>"; };
+		894F519728E5680C00FF2F9D /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		894F519A28E56A2E00FF2F9D /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		89D2DC1328E4A3C90039BA09 /* MovieTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewDataSource.swift; sourceTree = "<group>"; };
 		89D2DC1928E4A6E20039BA09 /* BAZProjectC1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAZProjectC1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewTests.swift; sourceTree = "<group>"; };
@@ -91,6 +96,7 @@
 			children = (
 				89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */,
 				894F518828E5544100FF2F9D /* MyViewContollerTests.swift */,
+				894F519A28E56A2E00FF2F9D /* ImageLoaderTests.swift */,
 			);
 			path = BAZProjectC1Tests;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 				C30893B828A2F42D004B1860 /* LaunchScreen.storyboard */,
 				C30893B628A2F42D004B1860 /* Assets.xcassets */,
 				C30893BB28A2F42D004B1860 /* Info.plist */,
+				894F519728E5680C00FF2F9D /* ImageLoader.swift */,
 			);
 			path = BAZProjectC1;
 			sourceTree = "<group>";
@@ -247,8 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894F519C28E56A2E00FF2F9D /* ImageLoaderTests.swift in Sources */,
 				894F518A28E5544100FF2F9D /* MyViewContollerTests.swift in Sources */,
 				89D2DC1C28E4A6E20039BA09 /* MovieTableViewTests.swift in Sources */,
+				894F519928E5680C00FF2F9D /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				894F518C28E5562D00FF2F9D /* AppFileManager.swift in Sources */,
 				C30893AE28A2F42B004B1860 /* AppDelegate.swift in Sources */,
 				89D2DC2B28E4AEDE0039BA09 /* MovieTableViewCell.swift in Sources */,
+				894F519828E5680C00FF2F9D /* ImageLoader.swift in Sources */,
 				89D2DC1428E4A3C90039BA09 /* MovieTableViewDataSource.swift in Sources */,
 				C30893B028A2F42B004B1860 /* SceneDelegate.swift in Sources */,
 				C30893E228A425E1004B1860 /* MovieAPI.swift in Sources */,

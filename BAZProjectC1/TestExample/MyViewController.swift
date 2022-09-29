@@ -19,7 +19,6 @@ final class MyViewController: UIViewController {
     func loadContent(fileManager: AppFileManager, path: String, jsonDecoder: JSONDecoder = JSONDecoder()) throws {
         guard let data = fileManager.contents(atPath: path) else {
             throw FileError.emptyPath
-            return
         }
         self.content = try jsonDecoder.decode([Movie].self, from: data)
     }
