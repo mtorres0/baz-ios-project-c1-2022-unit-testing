@@ -7,8 +7,12 @@
 
 import UIKit.UIImage
 
-struct ImageLoader {
-    static func loadFromNetwork(_ url: URL, completion: @escaping (UIImage?) -> Void)  {
+protocol ImageLoaderProtocol {
+    func loadFromNetwork(_ url: URL, completion: @escaping (UIImage?) -> Void)
+}
+
+struct ImageLoader: ImageLoaderProtocol {
+    func loadFromNetwork(_ url: URL, completion: @escaping (UIImage?) -> Void)  {
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 completion(nil)

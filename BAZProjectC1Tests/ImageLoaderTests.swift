@@ -16,7 +16,7 @@ final class ImageLoaderTests: XCTestCase {
         let expectation = XCTestExpectation(description: "get image async")
         
         // When
-        ImageLoader.loadFromNetwork(URL(string: imageUrlString)!) { image in
+        ImageLoader().loadFromNetwork(URL(string: imageUrlString)!) { image in
             XCTAssertNil(image)
             
             expectation.fulfill()
@@ -32,7 +32,7 @@ final class ImageLoaderTests: XCTestCase {
         let expectation = XCTestExpectation(description: "get image async")
         
         // When
-        ImageLoader.loadFromNetwork(URL(string: imageUrlString)!) { image in
+        ImageLoader().loadFromNetwork(URL(string: imageUrlString)!) { image in
             XCTAssertNotNil(image)
             
             expectation.fulfill()
