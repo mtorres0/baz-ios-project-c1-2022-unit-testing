@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		894F518528E552AA00FF2F9D /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F518428E552AA00FF2F9D /* MyViewController.swift */; };
+		894F518A28E5544100FF2F9D /* MyViewContollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F518828E5544100FF2F9D /* MyViewContollerTests.swift */; };
+		894F518C28E5562D00FF2F9D /* AppFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F518B28E5562D00FF2F9D /* AppFileManager.swift */; };
 		89D2DC1428E4A3C90039BA09 /* MovieTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC1328E4A3C90039BA09 /* MovieTableViewDataSource.swift */; };
 		89D2DC1C28E4A6E20039BA09 /* MovieTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */; };
 		89D2DC2B28E4AEDE0039BA09 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC2928E4AEDE0039BA09 /* MovieTableViewCell.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		894F518428E552AA00FF2F9D /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		894F518828E5544100FF2F9D /* MyViewContollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewContollerTests.swift; sourceTree = "<group>"; };
+		894F518B28E5562D00FF2F9D /* AppFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFileManager.swift; sourceTree = "<group>"; };
 		89D2DC1328E4A3C90039BA09 /* MovieTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewDataSource.swift; sourceTree = "<group>"; };
 		89D2DC1928E4A6E20039BA09 /* BAZProjectC1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAZProjectC1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewTests.swift; sourceTree = "<group>"; };
@@ -71,10 +77,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		894F518728E552B300FF2F9D /* TestExample */ = {
+			isa = PBXGroup;
+			children = (
+				894F518428E552AA00FF2F9D /* MyViewController.swift */,
+				894F518B28E5562D00FF2F9D /* AppFileManager.swift */,
+			);
+			path = TestExample;
+			sourceTree = "<group>";
+		};
 		89D2DC1A28E4A6E20039BA09 /* BAZProjectC1Tests */ = {
 			isa = PBXGroup;
 			children = (
 				89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */,
+				894F518828E5544100FF2F9D /* MyViewContollerTests.swift */,
 			);
 			path = BAZProjectC1Tests;
 			sourceTree = "<group>";
@@ -111,6 +127,7 @@
 		C30893AC28A2F42B004B1860 /* BAZProjectC1 */ = {
 			isa = PBXGroup;
 			children = (
+				894F518728E552B300FF2F9D /* TestExample */,
 				89D2DC2628E4AC3E0039BA09 /* cell */,
 				C30893AD28A2F42B004B1860 /* AppDelegate.swift */,
 				C30893AF28A2F42B004B1860 /* SceneDelegate.swift */,
@@ -230,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894F518A28E5544100FF2F9D /* MyViewContollerTests.swift in Sources */,
 				89D2DC1C28E4A6E20039BA09 /* MovieTableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,11 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30893C428A2F845004B1860 /* TrendingViewController.swift in Sources */,
+				894F518C28E5562D00FF2F9D /* AppFileManager.swift in Sources */,
 				C30893AE28A2F42B004B1860 /* AppDelegate.swift in Sources */,
 				89D2DC2B28E4AEDE0039BA09 /* MovieTableViewCell.swift in Sources */,
 				89D2DC1428E4A3C90039BA09 /* MovieTableViewDataSource.swift in Sources */,
 				C30893B028A2F42B004B1860 /* SceneDelegate.swift in Sources */,
 				C30893E228A425E1004B1860 /* MovieAPI.swift in Sources */,
+				894F518528E552AA00FF2F9D /* MyViewController.swift in Sources */,
 				C30893E328A425E1004B1860 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
