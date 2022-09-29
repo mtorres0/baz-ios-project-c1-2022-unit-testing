@@ -9,28 +9,19 @@ import UIKit
 class TrendingViewController: UITableViewController {
 
     var movies: [Movie] = []
+    var dataSource: MovieTableViewDataSource? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let movieApi = MovieAPI()
-        
         movies = movieApi.getMovies()
+        
+        tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
+        
+        dataSource = MovieTableViewDataSource(movies: movies)
+        tableView.dataSource = dataSource
         tableView.reloadData()
-    }
-
-}
-
-// MARK: - TableView's DataSource
-
-extension TrendingViewController {
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        movies.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell")!
     }
 
 }

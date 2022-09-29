@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89D2DC1428E4A3C90039BA09 /* MovieTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC1328E4A3C90039BA09 /* MovieTableViewDataSource.swift */; };
+		89D2DC1C28E4A6E20039BA09 /* MovieTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */; };
+		89D2DC2B28E4AEDE0039BA09 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2DC2928E4AEDE0039BA09 /* MovieTableViewCell.swift */; };
+		89D2DC2C28E4AEDE0039BA09 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89D2DC2A28E4AEDE0039BA09 /* MovieTableViewCell.xib */; };
 		C30893AE28A2F42B004B1860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30893AD28A2F42B004B1860 /* AppDelegate.swift */; };
 		C30893B028A2F42B004B1860 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30893AF28A2F42B004B1860 /* SceneDelegate.swift */; };
 		C30893B528A2F42B004B1860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30893B328A2F42B004B1860 /* Main.storyboard */; };
@@ -19,7 +23,22 @@
 		C383356E28CA917400FCE0D5 /* code-review-rubric.md in Resources */ = {isa = PBXBuildFile; fileRef = C383356D28CA917400FCE0D5 /* code-review-rubric.md */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		89D2DC1D28E4A6E20039BA09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C30893A228A2F42B004B1860 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C30893A928A2F42B004B1860;
+			remoteInfo = BAZProjectC1;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		89D2DC1328E4A3C90039BA09 /* MovieTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewDataSource.swift; sourceTree = "<group>"; };
+		89D2DC1928E4A6E20039BA09 /* BAZProjectC1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAZProjectC1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewTests.swift; sourceTree = "<group>"; };
+		89D2DC2928E4AEDE0039BA09 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		89D2DC2A28E4AEDE0039BA09 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		C30893AA28A2F42B004B1860 /* BAZProjectC1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAZProjectC1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30893AD28A2F42B004B1860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C30893AF28A2F42B004B1860 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +54,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		89D2DC1628E4A6E20039BA09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C30893A728A2F42B004B1860 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,12 +71,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89D2DC1A28E4A6E20039BA09 /* BAZProjectC1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				89D2DC1B28E4A6E20039BA09 /* MovieTableViewTests.swift */,
+			);
+			path = BAZProjectC1Tests;
+			sourceTree = "<group>";
+		};
+		89D2DC2628E4AC3E0039BA09 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				89D2DC2928E4AEDE0039BA09 /* MovieTableViewCell.swift */,
+				89D2DC2A28E4AEDE0039BA09 /* MovieTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		C30893A128A2F42B004B1860 = {
 			isa = PBXGroup;
 			children = (
 				C30893DA28A42481004B1860 /* README.md */,
 				C383356D28CA917400FCE0D5 /* code-review-rubric.md */,
 				C30893AC28A2F42B004B1860 /* BAZProjectC1 */,
+				89D2DC1A28E4A6E20039BA09 /* BAZProjectC1Tests */,
 				C30893AB28A2F42B004B1860 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				C30893AA28A2F42B004B1860 /* BAZProjectC1.app */,
+				89D2DC1928E4A6E20039BA09 /* BAZProjectC1Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,9 +111,11 @@
 		C30893AC28A2F42B004B1860 /* BAZProjectC1 */ = {
 			isa = PBXGroup;
 			children = (
+				89D2DC2628E4AC3E0039BA09 /* cell */,
 				C30893AD28A2F42B004B1860 /* AppDelegate.swift */,
 				C30893AF28A2F42B004B1860 /* SceneDelegate.swift */,
 				C30893C328A2F845004B1860 /* TrendingViewController.swift */,
+				89D2DC1328E4A3C90039BA09 /* MovieTableViewDataSource.swift */,
 				C30893E128A425E1004B1860 /* Movie.swift */,
 				C30893E028A425E1004B1860 /* MovieAPI.swift */,
 				C30893B328A2F42B004B1860 /* Main.storyboard */,
@@ -82,6 +129,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		89D2DC1828E4A6E20039BA09 /* BAZProjectC1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89D2DC1F28E4A6E20039BA09 /* Build configuration list for PBXNativeTarget "BAZProjectC1Tests" */;
+			buildPhases = (
+				89D2DC1528E4A6E20039BA09 /* Sources */,
+				89D2DC1628E4A6E20039BA09 /* Frameworks */,
+				89D2DC1728E4A6E20039BA09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89D2DC1E28E4A6E20039BA09 /* PBXTargetDependency */,
+			);
+			name = BAZProjectC1Tests;
+			productName = BAZProjectC1Tests;
+			productReference = 89D2DC1928E4A6E20039BA09 /* BAZProjectC1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C30893A928A2F42B004B1860 /* BAZProjectC1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C30893BE28A2F42D004B1860 /* Build configuration list for PBXNativeTarget "BAZProjectC1" */;
@@ -106,9 +171,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					89D2DC1828E4A6E20039BA09 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = C30893A928A2F42B004B1860;
+					};
 					C30893A928A2F42B004B1860 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -128,17 +197,26 @@
 			projectRoot = "";
 			targets = (
 				C30893A928A2F42B004B1860 /* BAZProjectC1 */,
+				89D2DC1828E4A6E20039BA09 /* BAZProjectC1Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		89D2DC1728E4A6E20039BA09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C30893A828A2F42B004B1860 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C30893BA28A2F42D004B1860 /* LaunchScreen.storyboard in Resources */,
 				C30893DB28A42481004B1860 /* README.md in Resources */,
+				89D2DC2C28E4AEDE0039BA09 /* MovieTableViewCell.xib in Resources */,
 				C30893B728A2F42D004B1860 /* Assets.xcassets in Resources */,
 				C383356E28CA917400FCE0D5 /* code-review-rubric.md in Resources */,
 				C30893B528A2F42B004B1860 /* Main.storyboard in Resources */,
@@ -148,12 +226,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		89D2DC1528E4A6E20039BA09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D2DC1C28E4A6E20039BA09 /* MovieTableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C30893A628A2F42B004B1860 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C30893C428A2F845004B1860 /* TrendingViewController.swift in Sources */,
 				C30893AE28A2F42B004B1860 /* AppDelegate.swift in Sources */,
+				89D2DC2B28E4AEDE0039BA09 /* MovieTableViewCell.swift in Sources */,
+				89D2DC1428E4A3C90039BA09 /* MovieTableViewDataSource.swift in Sources */,
 				C30893B028A2F42B004B1860 /* SceneDelegate.swift in Sources */,
 				C30893E228A425E1004B1860 /* MovieAPI.swift in Sources */,
 				C30893E328A425E1004B1860 /* Movie.swift in Sources */,
@@ -161,6 +249,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89D2DC1E28E4A6E20039BA09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C30893A928A2F42B004B1860 /* BAZProjectC1 */;
+			targetProxy = 89D2DC1D28E4A6E20039BA09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C30893B328A2F42B004B1860 /* Main.storyboard */ = {
@@ -182,6 +278,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		89D2DC2028E4A6E20039BA09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mtorres.com.mx.BAZProjectC1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BAZProjectC1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BAZProjectC1";
+			};
+			name = Debug;
+		};
+		89D2DC2128E4A6E20039BA09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mtorres.com.mx.BAZProjectC1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BAZProjectC1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BAZProjectC1";
+			};
+			name = Release;
+		};
 		C30893BC28A2F42D004B1860 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +489,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		89D2DC1F28E4A6E20039BA09 /* Build configuration list for PBXNativeTarget "BAZProjectC1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89D2DC2028E4A6E20039BA09 /* Debug */,
+				89D2DC2128E4A6E20039BA09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C30893A528A2F42B004B1860 /* Build configuration list for PBXProject "BAZProjectC1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
